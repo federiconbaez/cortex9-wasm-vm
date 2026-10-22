@@ -1,0 +1,13 @@
+[package]
+name = "cortex9-wasm-vm"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.75"
+license = "Apache-2.0"
+description = "WebAssembly MVP interpreter in Rust: binary decoder, validator and stack machine, run against the official 1.0 spec tests"
+repository = "https://github.com/federiconbaez/cortex9-wasm-vm"
+
+[dependencies]
+
+[dev-dependencies]
+wast = "207.0.0"
