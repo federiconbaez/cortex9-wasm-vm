@@ -83,3 +83,7 @@ impl fmt::Display for Trap {
 pub(crate) fn malformed<T>(m: impl Into<String>) -> Result<T, Error> {
     Err(Error::Malformed(m.into()))
 }
+
+pub(crate) fn invalid<T>(m: impl Into<String>) -> Result<T, Error> {
+    Err(Error::Invalid(m.into()))
+}
