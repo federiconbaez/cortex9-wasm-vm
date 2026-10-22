@@ -34,7 +34,7 @@ jobs:
       - name: Seed corpus from the spec modules
         run: cargo run --release --example dump_corpus -- fuzz/seeds
       - name: Fuzz decode → validate → run for 60 s
-        run: cd fuzz && cargo fuzz run decode_run corpus/decode_run seeds -- -max_total_time=60 -rss_limit_mb=2048
+        run: cd fuzz && mkdir -p corpus/decode_run && cargo fuzz run decode_run corpus/decode_run seeds -- -max_total_time=60 -rss_limit_mb=2048
 
   msrv:
     runs-on: ubuntu-latest
